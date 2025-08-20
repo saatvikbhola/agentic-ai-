@@ -1,0 +1,31 @@
+select_destination:
+  description: >
+    Based on the user’s preferred region ({preferred_region}) and type of trip ({trip_type}),
+    suggest 2–3 top destinations that fit their needs.
+  expected_output: >
+    A short list of recommended destinations with 1–2 sentences each explaining why they are suitable.
+  agent: destination_expert
+  tools: []
+
+plan_itinerary:
+  description: >
+    Create a detailed {trip_type} itinerary for a 5-day trip in {preferred_region}.
+    Include activities, food recommendations, and cultural experiences.
+  expected_output: >
+    A day-by-day plan with morning, afternoon, and evening activities.
+  agent: itinerary_planner
+  tools: []
+
+estimate_budget:
+  description: >
+    Take the itinerary from the previous step ({plan_itinerary.output}) and estimate the total budget.
+    Provide a breakdown for accommodation, food, transport, and activities.
+    Then combine the full itinerary and budget into one detailed report and save it to trip_plan.txt.
+  expected_output: >
+    A final travel plan document that includes:
+    1. The full day-by-day itinerary (copied from plan_itinerary output).
+    2. A clear budget summary with cost breakdown and total estimated cost.
+    The combined report must be written into trip_plan.txt.
+  agent: budget_advisor
+  tools:
+    - file_writer_tool
