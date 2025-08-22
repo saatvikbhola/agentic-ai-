@@ -1,3 +1,18 @@
+Assignment – 2: Travel Planner Crew 
+Problem Statement: 
+You are tasked with building a Travel Planner Crew using CrewAI that helps users design a travel  itinerary based on their preferences.  
+1. Create a crew with the following agents: 
+- Destination Expert Agent: Suggests top destinations based on user input (e.g., “I want a  5-day budget-friendly trip in Europe”).  
+- Itinerary Planner Agent: Creates a day-by-day plan with activities, food options, and  cultural experiences.  
+- Budget Advisor Agent: Estimates the total cost of the trip and provides a budget  breakdown (accommodation, food, transport, activities). 
+2. The crew should take two inputs from the user via CLI:  
+- Preferred region/destination (e.g., “Europe”, “Japan”)  
+- Type of trip (e.g., “budget-friendly”, “luxury”, “adventure”, “cultural”) 
+3. Conϐigure the crew so that: 
+- The Destination Expert selects possible destinations.  
+- The Itinerary Planner designs a schedule.  
+
+
 # Mycrew1 Crew (need to change some part of it)
 
 Welcome to the Mycrew1 Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
