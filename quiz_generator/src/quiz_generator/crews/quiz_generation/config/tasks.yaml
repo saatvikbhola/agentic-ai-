@@ -1,0 +1,72 @@
+mcq_task:
+  description: >
+    Analyze the 'Key Concepts & Definitions' section of the 'Content Brief' 
+    provided below.
+
+    --- CONTENT BRIEF ---
+    {content_brief}
+    --- END OF BRIEF ---
+
+    Generate 7 multiple-choice questions based *only* on the 
+    'Key Concepts & Definitions' section.
+    For each question, provide 1 correct answer and 3 plausible incorrect 
+    distractors.
+  expected_output: >
+    A list of 7 questions in JSON format. Do not include any other text or 
+    preamble, just the JSON list. Ensure the JSON is valid.
+
+    Example format:
+    ```json
+    [
+      {
+        "question": "What is [Concept Name]?",
+        "options": [
+          "Plausible Distractor 1",
+          "The Correct Answer",
+          "Plausible Distractor 2",
+          "Plausible Distractor 3"
+        ],
+        "correct_answer": "The Correct Answer"
+      },
+      {
+        "question": "...",
+        "options": ["...", "...", "...", "..."],
+        "correct_answer": "..."
+      }
+    ]
+    ```
+  agent: mcq_generator # Changed from mcq_creator to match your agents.yaml
+     
+tf_task:
+  description: >
+    Analyze the 'Key Facts & Verifiable Data' section of the 'Content Brief' 
+    provided below.
+
+    --- CONTENT BRIEF ---
+    {content_brief}
+    --- END OF BRIEF ---
+
+    Generate 7 True/False questions based *only* on the 
+    'Key Facts & Verifiable Data' section.
+  expected_output: >
+    A list of 7 questions in JSON format. Do not include any other text or 
+    preamble, just the JSON list. Ensure the JSON is valid.
+
+    Example format:
+    ```json
+    [
+      {
+        "question": "[Factual statement from the brief].",
+        "answer": true
+      },
+      {
+        "question": "[A slightly altered version of a fact from the brief].",
+        "answer": false
+      },
+      {
+        "question": "...",
+        "answer": "..." 
+      }
+    ]
+    ```
+  agent: true_false_generator

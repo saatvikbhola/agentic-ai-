@@ -1,0 +1,104 @@
+{
+    "multiple_choice": [
+        {
+            "question": "What defines a 'Prompt Injection Vulnerability'?",
+            "options": [
+                "A system's inability to process multimodal inputs.",
+                "A security flaw where user prompts alter an LLM\u2019s behavior or output in unintended ways.",
+                "The accidental revelation of an LLM's internal system prompts.",
+                "An LLM generating false or inaccurate information."
+            ],
+            "correct_answer": "A security flaw where user prompts alter an LLM\u2019s behavior or output in unintended ways."
+        },
+        {
+            "question": "Which of the following best describes 'Jailbreaking' in the context of LLMs?",
+            "options": [
+                "The process of an LLM processing external content with malicious instructions.",
+                "An LLM revealing sensitive information to a user.",
+                "A specific form of prompt injection causing an LLM to completely disregard its safety protocols.",
+                "The manipulation of training data to introduce biases."
+            ],
+            "correct_answer": "A specific form of prompt injection causing an LLM to completely disregard its safety protocols."
+        },
+        {
+            "question": "What is characteristic of an 'Indirect Prompt Injection'?",
+            "options": [
+                "A user's directly provided input prompt intentionally alters the LLM's behavior.",
+                "An LLM processes external content containing malicious instructions that alter its behavior.",
+                "The LLM reveals its underlying system prompts.",
+                "The LLM generates excessive output without constraint."
+            ],
+            "correct_answer": "An LLM processes external content containing malicious instructions that alter its behavior."
+        },
+        {
+            "question": "The 'RAG Triad' is a set of criteria used to evaluate LLM responses. What three aspects does it focus on?",
+            "options": [
+                "Processing speed, data privacy, and ethical considerations.",
+                "Context relevance, groundedness (accuracy relative to source material), and question/answer relevance.",
+                "Input validation, output sanitization, and resource consumption.",
+                "Model size, training data volume, and deployment cost."
+            ],
+            "correct_answer": "Context relevance, groundedness (accuracy relative to source material), and question/answer relevance."
+        },
+        {
+            "question": "According to LLM02:2025, what vulnerability is defined as 'Sensitive Information Disclosure'?",
+            "options": [
+                "An attacker manipulating training data to introduce backdoors.",
+                "An LLM or its application context revealing confidential data like PII or financial details.",
+                "An LLM generating false or misleading information.",
+                "An LLM being granted excessive autonomy."
+            ],
+            "correct_answer": "An LLM or its application context revealing confidential data like PII or financial details."
+        },
+        {
+            "question": "What does 'Data and Model Poisoning' (LLM04:2025) refer to?",
+            "options": [
+                "The accidental revelation of an LLM's system prompts.",
+                "An LLM generating outputs that are not properly validated or sanitized.",
+                "Malicious manipulation of data used in pre-training, fine-tuning, or embeddings to introduce vulnerabilities or biases.",
+                "The compromise of training data integrity within the LLM's development ecosystem."
+            ],
+            "correct_answer": "Malicious manipulation of data used in pre-training, fine-tuning, or embeddings to introduce vulnerabilities or biases."
+        },
+        {
+            "question": "The vulnerability 'Excessive Agency' (LLM06:2025) describes what condition in an LLM-based system?",
+            "options": [
+                "The LLM producing false, inaccurate, or misleading information.",
+                "The system is granted a greater degree of autonomy or ability to call functions than is necessary or safe.",
+                "The LLM revealing confidential data such as PII.",
+                "The LLM generating outputs based on inputs without adequate constraints."
+            ],
+            "correct_answer": "The system is granted a greater degree of autonomy or ability to call functions than is necessary or safe."
+        }
+    ],
+    "true_false": [
+        {
+            "question": "A Prompt Injection Vulnerability occurs when user prompts alter the LLM\u2019s behavior or output in unintended ways.",
+            "answer": true
+        },
+        {
+            "question": "Techniques like Retrieval Augmented Generation (RAG) and fine-tuning fully mitigate all prompt injection vulnerabilities.",
+            "answer": false
+        },
+        {
+            "question": "Jailbreaking is a form of prompt injection.",
+            "answer": true
+        },
+        {
+            "question": "Indirect prompt injections occur when an LLM accepts input from external sources that alters its behavior.",
+            "answer": true
+        },
+        {
+            "question": "Multimodal AI introduces unique prompt injection risks.",
+            "answer": true
+        },
+        {
+            "question": "MITRE ATLAS AML.T0051.000 refers to LLM Prompt Injection: Indirect.",
+            "answer": false
+        },
+        {
+            "question": "Implementing input and output filtering is a listed mitigation strategy for prompt injection.",
+            "answer": true
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+scrape_task:
+  description: >
+    Execute the Website Scraping Tool on the URL: {url}. Your single focus 
+    is to get all the readable text from this page, which will be the 
+    basis for a new quiz.
+  expected_output: >
+    The clean, raw text content from the URL. All HTML, ads, and navigation 
+    menus must be stripped out.
+  agent: content_scraper
+  
+research_task:
+  description: >
+    Read the provided raw text from the scrape_task. Meticulously analyze 
+    it and extract all information that can be used to create quiz questions. 
+    Focus on verifiable facts, key definitions, lists of items/people/dates, 
+    and the main arguments or themes.
+  expected_output: >
+    A highly structured 'Content Brief' formatted in Markdown. This brief 
+    must contain:
+    1. A concise summary of the entire text.
+    2. A bulleted list of 'Key Facts & Verifiable Data' (perfect for True/False questions).
+    3. A section of 'Key Concepts & Definitions' (perfect for Multiple Choice questions).
+    
+    
+    This brief will be the *only* source of information for the quiz generation crew.
+  agent: research_analyst

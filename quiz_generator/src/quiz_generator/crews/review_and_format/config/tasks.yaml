@@ -1,0 +1,46 @@
+review_task:
+  description: >
+    Review the combined quiz questions provided below (in JSON format), comparing them against the
+    original 'Content Brief' (Markdown) for accuracy.
+
+    --- COMBINED QUESTIONS (JSON) ---
+    {generated_quiz}
+    --- END COMBINED QUESTIONS ---
+
+    --- ORIGINAL CONTENT BRIEF (MARKDOWN) ---
+    {content_brief}
+    --- END CONTENT BRIEF ---
+
+    Evaluate each question based on: Clarity, Grammar, Accuracy (vs. Brief), Answerability (from Brief).
+    Discard any failing questions. Consolidate ALL approved questions into a single JSON structure.
+  expected_output: >
+    A single, clean JSON object containing ONLY the approved questions.
+    The JSON object MUST have two top-level keys:
+    - "multiple_choice": A list of approved multiple-choice question objects.
+    - "true_false": A list of approved true/false question objects.
+
+    Example:
+    ```json
+    {
+      "multiple_choice": [
+        {"question": "...", "options": [...], "correct_answer": "..."}
+      ],
+      "true_false": [
+        {"question": "...", "answer": true}
+      ]
+    }
+    ```
+    Do NOT include any other text, preamble, or markdown formatting around the JSON object.
+  agent: quiz_critic
+
+format_task:
+  description: >
+    Take the final JSON object of approved questions from the review_task.
+    Pass this JSON object to the WordOutputTool to format and save it
+    to the file named 'final_quiz.docx'.
+  expected_output: >
+    A confirmation message from the WordOutputTool stating that the Word document 'final_quiz.docx'
+    has been successfully created.
+    Example: "Successfully saved formatted quiz to Word document 'final_quiz.docx'"
+  agent: word_formatter
+  # Tool usage is handled by the agent using the JSON output from review_task
