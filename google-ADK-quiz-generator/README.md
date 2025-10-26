@@ -1,4 +1,50 @@
-File structure
+### Installation Steps
+
+1.  **Clone the Repository**
+    Open your terminal, navigate to where you want to store the project, and run:
+    ```bash
+    git clone <your-repository-url>
+    cd google-ADK-quiz-generator
+    ```
+
+2.  **Create and Activate a Virtual Environment**
+
+    **On Windows:**
+    ```bash
+    python -m venv venv
+    .\venv\Scripts\activate
+    ```
+
+3.  **Install Project Dependencies**
+    Install the project in "editable" mode. This command reads the `pyproject.toml` file and installs all listed dependencies.
+    ```bash
+    pip install -e .
+    ```
+
+4.  **Set Up Your API Key**
+    The application requires a Google Gemini API key to run.
+    
+    Create a new file named `.env` in the root of the `google-ADK-quiz-generator` directory:
+
+    ```
+    # On Windows
+    echo. > .env
+    ```
+
+    Open the `.env` file with a text editor and add your API key:
+    ```
+    GEMINI_API_KEY=your_api_key_here
+    ```
+
+
+
+
+
+
+
+
+
+###File structure
 
     google-ADK-quiz-generator/
     ├── pyproject.toml            # Project configuration and dependencies
