@@ -1,0 +1,78 @@
+{
+  "multiple_choice": [
+    {
+      "question": "What is a core characteristic of an electron in a state of quantum superposition?",
+      "options": {
+        "A": "It exists in a single, definite location with 100% certainty.",
+        "B": "Its different states can be thought of as separate outcomes, each with a particular probability of being observed.",
+        "C": "It loses all wavelike properties.",
+        "D": "It can only move at one specific, observable speed."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "According to the text, how do quantum waves differ fundamentally from waves on the surface of a pond?",
+      "options": {
+        "A": "Quantum waves are purely physical phenomena, unlike pond waves.",
+        "B": "Quantum waves are mathematical expressions describing probabilities, while pond waves are formed by water movement.",
+        "C": "Quantum waves can only exist in a vacuum, whereas pond waves require a medium.",
+        "D": "Quantum waves always travel at the speed of light, which is not true for pond waves."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "What was Erwin Schr\u00f6dinger's original intention behind proposing the 'Schr\u00f6dinger's cat' thought experiment?",
+      "options": {
+        "A": "To definitively prove the existence of quantum superposition.",
+        "B": "To demonstrate what he saw as the absurdity of quantum science.",
+        "C": "To illustrate a practical application of quantum computing.",
+        "D": "To provide a simple, easily visualized example of quantum entanglement."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "In the light filter experiment described, what observation provides evidence for the existence of superposition?",
+      "options": {
+        "A": "Light passes through a horizontal filter and then completely through a vertical filter.",
+        "B": "Light is completely blocked when passing through two consecutive horizontal filters.",
+        "C": "Adding a diagonal filter between a horizontal and a vertical filter allows some light to pass through the entire system.",
+        "D": "Polarized sunglasses block all light regardless of its polarization."
+      },
+      "answer": "C"
+    },
+    {
+      "question": "According to the text, what is the role of the diagonal filter when placed between a horizontal and a vertical filter in the experiment?",
+      "options": {
+        "A": "It amplifies the intensity of the light passing through.",
+        "B": "It completely blocks any remaining light.",
+        "C": "It acts to 'reset' the superposition of the light by making it more likely to be vertically polarized.",
+        "D": "It rotates the light's polarization by exactly 90 degrees."
+      },
+      "answer": "C"
+    }
+  ],
+  "true_false": [
+    {
+      "question": "In quantum science, superposition describes how objects such as electrons and photons can have wavelike properties that combine.",
+      "answer": true
+    },
+    {
+      "question": "Unlike waves on a pond, quantum waves are physical disturbances in a medium that precisely define an object's state.",
+      "answer": false
+    },
+    {
+      "question": "Erwin Schr\u00f6dinger intended his famous cat thought experiment to demonstrate the clear and intuitive nature of quantum superposition.",
+      "answer": false
+    },
+    {
+      "question": "If light passes through a horizontal filter and then immediately through a vertical filter, 100 percent of the light will pass through both filters.",
+      "answer": false
+    },
+    {
+      "question": "Adding a diagonal filter between a horizontal and a vertical filter allows some light to pass through the entire system, which is a result of superposition.",
+      "answer": true
+    }
+  ],
+  "validation_notes": "All 5 multiple-choice questions and 5 true/false questions have been fact-checked against the provided content brief. All questions and their respective answers are consistent with the brief. No external web searches were necessary.",
+  "fact_checking_sources": []
+}
