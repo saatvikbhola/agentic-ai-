@@ -46,7 +46,7 @@ Download prometheus and docker in you local system.
 
 To get this to work, you need to run two services: the **Pushgateway** itself, and then your **Python script**. 
 
----
+
 
 ### Step 1: Run the Prometheus Pushgateway
 
@@ -61,7 +61,6 @@ Before you run the Python script, you must start the Pushgateway service.
 
 3.  You can verify it's running by opening `http://localhost:9091` in your browser.
 
----
 
 ### Step 2: Run the Quiz Generator Script
 
@@ -81,7 +80,7 @@ With the Pushgateway running in your first terminal, go back to the terminal you
     [INFO] Metrics pushed (Duration: 56.63s, Status: success, Questions: 10).
     ```
 
----
+
 
 ### Step 3: Check Your Metrics
 
