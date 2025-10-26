@@ -18,6 +18,7 @@ dependencies = [
     "python-dotenv>=1.0.1,<2.0.0",
     
     # Tool dependencies
+    "python-docx"
     "requests>=2.32.3,<3.0.0",
     "beautifulsoup4>=4.12.3,<5.0.0",
     "duckduckgo-search>=6.1.8,<7.0.0",
