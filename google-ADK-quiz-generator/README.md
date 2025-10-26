@@ -36,15 +36,70 @@
     GEMINI_API_KEY=your_api_key_here
     ```
 
+------------------
+
+## Running the Script with Prometheus
+
+This project is configured to automatically send run metrics to a **Prometheus Pushgateway**. The `main.py` script will detect if the `prometheus-client` library is installed and, if so, attempt to push metrics to `localhost:9091` at the end of every run.
+
+Download prometheus and docker in you local system.
+
+To get this to work, you need to run two services: the **Pushgateway** itself, and then your **Python script**. 
+
+---
+
+### Step 1: Run the Prometheus Pushgateway
+
+Before you run the Python script, you must start the Pushgateway service.
+
+1.  Open a new terminal window.
+2.  Run the following Docker command to download and start the official Pushgateway image. This will run it in the background and map it to `localhost:9091`.
+
+    ```bash
+    docker run -d --name pushgateway -p 9091:9091 prom/pushgateway
+    ```
+
+3.  You can verify it's running by opening `http://localhost:9091` in your browser.
+
+---
+
+### Step 2: Run the Quiz Generator Script
+
+With the Pushgateway running in your first terminal, go back to the terminal you used for installation (where your virtual environment is active).
+
+1.  Run the `main.py` script as usual:
+
+    ```bash
+    python src/adk_quiz_generator/main.py
+    ```
+
+2.  Follow the prompts to enter a URL and caching preference.
+
+3.  When the script finishes, check its output. You should see a log message confirming the metrics were pushed successfully:
+
+    ```
+    [INFO] Metrics pushed (Duration: 56.63s, Status: success, Questions: 10).
+    ```
+
+---
+
+### Step 3: Check Your Metrics
+
+Go back to your browser at `http://localhost:9091`. You will now see metrics listed for the `quiz_generator_batch` job, including:
+
+* `quiz_generator_last_run_duration_seconds`
+* `quiz_generator_questions_generated_total`
+* `quiz_generator_runs_total` (labeled by `status`)
+
+**Note:** If you see an error in the log like `Could not push metrics to Pushgateway...`, it means you forgot to start the Pushgateway in Step 1. The script will still generate the quiz files, but no monitoring data will be sent.
+
+--------------
 
 
 
 
 
-
-
-
-###File structure
+### File structure
 
     google-ADK-quiz-generator/
     ├── pyproject.toml            # Project configuration and dependencies
