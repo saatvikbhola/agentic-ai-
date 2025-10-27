@@ -72,3 +72,8 @@ Agent Types Legend:
  - 🟡 ParallelAgent - Executes sub-agents concurrently
  - 🟢 LlmAgent - Individual AI agents with specific instructions and tools
  - 🔴 Tools - Custom functions for file I/O, web scraping, and search
+
+
+---
+
+# Low Level Agent Architecture
