@@ -1,3 +1,9 @@
+# High-Level Agent Architecture
+
+## This diagram shows the Google ADK agent composition and workflow
+
+
+
 ```mermaid
 
 ---
@@ -59,3 +65,10 @@ flowchart TB
 
 
 ```
+
+Agent Types Legend:
+
+ - 🟡 SequentialAgent - Executes sub-agents one after another
+ - 🟡 ParallelAgent - Executes sub-agents concurrently
+ - 🟢 LlmAgent - Individual AI agents with specific instructions and tools
+ - 🔴 Tools - Custom functions for file I/O, web scraping, and search
