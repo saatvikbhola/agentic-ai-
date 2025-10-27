@@ -4,6 +4,7 @@
 config:
   look: classic
   theme: forest
+  layout: fixed
 ---
 flowchart TB
  subgraph QuizOrchestrator["Quiz Orchestrator - SequentialAgent"]
@@ -48,7 +49,7 @@ flowchart TB
     style QuizOrchestrator fill:transparent
     linkStyle 0 stroke:#FFFFFF,fill:none
     linkStyle 1 stroke:#FFFFFF,fill:none
-    linkStyle 2 stroke:#FFFFFF
+    linkStyle 2 stroke:#FFFFFF,fill:none
     linkStyle 3 stroke:#FFFFFF,fill:none
     linkStyle 4 stroke:#FFFFFF,fill:none
     linkStyle 5 stroke:#FFFFFF,fill:none
