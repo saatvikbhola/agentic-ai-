@@ -1,5 +1,4 @@
-```
-mermaid
+```mermaid
 graph TB
     User([User]) -->|Input: URL + Cache Preference| Orchestrator
     
