@@ -3,7 +3,7 @@
 1.  **Clone the Repository**
     Open your terminal, navigate to where you want to store the project, and run:
     ```bash
-    git clone <your-repository-url>
+    git clone https://github.com/saatvikbhola/agentic-ai-.git
     cd google-ADK-quiz-generator
     ```
 
